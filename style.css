@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: skyblue;
+}
+
+#full-img {
+  /* max-width: 100vw; */
+  /* max-height: 100vh; */
+  /* object-fit: scale-down; */
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+div img {
+  width: 100px;
+}
+
+div {
+  border: 2px solid greenyellow;
+  background-color: black;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transform: translateX(-50%);
+  width: 300px;
+  overflow: auto;
+}
+
+@media (min-width: 800px) {
+  div {
+    width: 500px;
+  }
+}
