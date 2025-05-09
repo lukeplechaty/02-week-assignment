@@ -4,11 +4,16 @@
 
 - basic requirements
 
+  - i have meet all goals
+  - finding out how overflow works helped a lot
+  - geting the tabbig to work was ease as well
+    ![alt text](image.png)
+
 - stretch goals
 
 ## References
 
-- i use okgo.app to help make a layout
+- i use okso.app to help make a layout
 - all my images of my cats
 - i used w3schools to find how to get the div to be true center
 - i used w3schools to find out how to do overflow
