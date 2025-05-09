@@ -10,7 +10,8 @@
     ![alt text](image.png)
 
 - stretch goals
-  -i added multiple media queries
+  - i added multiple media queries
+  - i added srcset to all images
 
 ## References
 

@@ -17,6 +17,12 @@ const contaner = document.querySelector("div");
 imgs.forEach((item) => {
   const thisImg = document.createElement("img");
   thisImg.src = "./images/" + item.src;
+  thisImg.srcset = `
+  ./images/2000/${item.src} 2000w,
+  ./images/1000/${item.src} 1000w,
+  ./images/500/${item.src} 500w,
+  ./images/200/${item.src} 200w,
+  `;
   thisImg.alt = item.alt;
   thisImg.tabIndex = "0";
   contaner.append(thisImg);
@@ -31,5 +37,11 @@ imgs.forEach((item) => {
 
 function setFullImg(item) {
   fullImg.src = "./images/" + item.src;
+  fullImg.srcset = `
+  ./images/2000/${item.src} 2000w,
+  ./images/1000/${item.src} 1000w,
+  ./images/500/${item.src} 500w,
+  ./images/200/${item.src} 200w,
+  `;
   fullImg.alt = item.alt;
 }
