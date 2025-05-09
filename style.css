@@ -17,6 +17,17 @@
   object-fit: cover;
 }
 
+#left {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+}
+#right {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+}
+
 div img {
   width: 100px;
 }

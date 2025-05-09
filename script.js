@@ -11,10 +11,10 @@ let imgs = [
   { src: "sleeping-kitten.jpg", alt: "sleeping kitten" },
   { src: "kitten-at-play.jpg", alt: "kitten playing" },
 ];
+let id = 0;
 
-const fullImg = document.getElementById("full-img");
 const contaner = document.querySelector("div");
-imgs.forEach((item) => {
+imgs.forEach((item, index) => {
   const thisImg = document.createElement("img");
   thisImg.src = "./images/" + item.src;
   thisImg.srcset = `
@@ -28,13 +28,20 @@ imgs.forEach((item) => {
   contaner.append(thisImg);
   thisImg.addEventListener("click", (e) => {
     setFullImg(item);
+    id = index;
   });
   thisImg.addEventListener("keypress", (e) => {
-    if (e.code == "Enter") setFullImg(item);
-    else if (e.code == "Space") setFullImg(item);
+    if (e.code == "Enter") {
+      setFullImg(item);
+      id = index;
+    } else if (e.code == "Space") {
+      setFullImg(item);
+      id = index;
+    }
   });
 });
 
+const fullImg = document.getElementById("full-img");
 function setFullImg(item) {
   fullImg.src = "./images/" + item.src;
   fullImg.srcset = `
@@ -45,3 +52,17 @@ function setFullImg(item) {
   `;
   fullImg.alt = item.alt;
 }
+
+const leftButton = document.getElementById("left");
+const rightButton = document.getElementById("right");
+
+leftButton.addEventListener("click", (e) => {
+  id--;
+  if (id < 0) id = imgs.length - 1;
+  setFullImg(imgs[id]);
+});
+rightButton.addEventListener("click", (e) => {
+  id++;
+  if (id > imgs.length - 1) id = 0;
+  setFullImg(imgs[id]);
+});

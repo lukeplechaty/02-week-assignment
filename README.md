@@ -12,6 +12,7 @@
 - stretch goals
   - i added multiple media queries
   - i added srcset to all images
+  - i added button for left and right
 
 ## References
 
