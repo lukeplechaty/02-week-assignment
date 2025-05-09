@@ -31,12 +31,27 @@ div {
   align-items: center;
   gap: 3px;
   transform: translateX(-50%);
-  width: 300px;
+  width: 200px;
   overflow: auto;
 }
 
+@media (min-width: 400px) {
+  div {
+    width: 300px;
+  }
+}
+@media (min-width: 600px) {
+  div {
+    width: 400px;
+  }
+}
 @media (min-width: 800px) {
   div {
     width: 500px;
+  }
+}
+@media (min-width: 1000px) {
+  div {
+    width: 600px;
   }
 }
